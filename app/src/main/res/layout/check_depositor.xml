@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:text="님에게 송금하겠습니다"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_saved_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/bank_name"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_saved_select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_saved_select"
+        app:layout_constraintTop_toTopOf="@+id/tv_saved_select" />
+
+    <Button
+        android:id="@+id/btn_transfer_auth"
+        android:layout_width="132dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="108dp"
+        android:clickable="false"
+        android:text="송금"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_saved_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="69dp"
+        android:text="생체 정보 저장 은행 선택"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_transfer_auth"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/check_depositor_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_confirm"
+        app:layout_constraintStart_toStartOf="@+id/tv_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirm" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bank_name">
+        <item>오픈</item>
+
+    </string-array>
+</resources>
