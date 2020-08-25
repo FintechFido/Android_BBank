@@ -3,6 +3,7 @@ package com.example.fintech2020_bbanck.function;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -25,6 +26,7 @@ public class Check_depositor extends Activity {
     private ProgressBar progressBar;
     private Button btn;
     private Spinner spinner;
+    private String bankType;
     private static final String B_BANK_CODE = "2";
     private static final int REQUEST_CODE = 4000;
 
@@ -97,12 +99,15 @@ public class Check_depositor extends Activity {
         Call_HIDO call_hido = new Call_HIDO();
         if(call_hido.exist_check(Check_depositor.this)) {
             Intent intent = new Intent();
+            bankType =  String.valueOf(spinner.getSelectedItemPosition()+1);
+            Log.d("tag","bankType : " + bankType);
+
             intent.setClassName("com.example.fintech_hido","com.example.fintech_hido.function.Fingerprint_function");
             intent.putExtra("mode", "auth_check");
             intent.putExtra("session_key", User.getInstance().getSessionKey());
             intent.putExtra("imei", User.getInstance().getImei());
             intent.putExtra("running",User.getInstance().getRunningCode());
-            intent.putExtra("saved",spinner.getSelectedItem().toString()+"");
+            intent.putExtra("saved",bankType);
             startActivityForResult(intent,REQUEST_CODE);
         }
         else{

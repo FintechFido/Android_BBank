@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="bank_name">
+    <string-array name="bankName">
         <item>오픈</item>
-
+    </string-array>
+    <string-array name="bankType">
+        <item>A Bank</item> <!--  getSelectedItemPostion : 0 -->
+        <item>B Bank</item> <!-- getSelectedItemPostion : 1 -->
     </string-array>
 </resources>

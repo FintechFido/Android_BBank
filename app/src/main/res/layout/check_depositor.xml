@@ -20,7 +20,7 @@
         android:id="@+id/spinner_saved_select"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:entries="@array/bank_name"
+        android:entries="@array/bank_type"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@+id/tv_saved_select"
         app:layout_constraintEnd_toEndOf="parent"
