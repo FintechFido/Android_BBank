@@ -13,7 +13,7 @@
         android:text="B BANK"
         android:textAlignment="center"
         android:textColor="#9E9E9E"
-        android:textSize="110dp"
+        android:textSize="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/progressBar"
