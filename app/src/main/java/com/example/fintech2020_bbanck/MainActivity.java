@@ -35,6 +35,12 @@ public class MainActivity extends Activity {
         get_balance();
     }
 
+    private void init() {
+        toast =  Toast.makeText(MainActivity.this, "'뒤로' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
+        btn_register = (Button)findViewById(R.id.btn_register);
+        btn_transfer= (Button)findViewById(R.id.btn_transfer);
+    }
+
     private void setOnBtnClickListener() {
         //송금하기
         btn_transfer.setOnClickListener(new View.OnClickListener() {
@@ -54,12 +60,6 @@ public class MainActivity extends Activity {
                 finish();
             }
         });
-    }
-
-    private void init() {
-        toast =  Toast.makeText(MainActivity.this, "'뒤로' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
-        btn_register = (Button)findViewById(R.id.btn_register);
-        btn_transfer= (Button)findViewById(R.id.btn_transfer);
     }
 
     public void get_balance() {

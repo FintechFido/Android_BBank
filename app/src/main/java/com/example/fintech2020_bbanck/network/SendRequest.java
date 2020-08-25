@@ -133,7 +133,7 @@ public class SendRequest extends Activity {
                 else if(jsonObject.getString("mode").toString().equals("balance")) {
                     if(jsonObject.getString("result").toString().equals("true")) {
                         MainActivity mainActivity = (MainActivity)context;
-                        mainActivity.update_balance(jsonObject.getString("balance").toString());
+                        mainActivity.update_balance(jsonObject.getString("value").toString());
                     }
                     else {
                         MainActivity mainActivity = (MainActivity)context;

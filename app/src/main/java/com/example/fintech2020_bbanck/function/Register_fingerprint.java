@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class Register_fingerprint extends Activity {
 
     private long backKeyPressedTime = 0;
-    private Toast toast = Toast.makeText(Register_fingerprint.this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
+    private Toast toast;
 
     public Register_fingerprint()
     {}
@@ -24,6 +24,7 @@ public class Register_fingerprint extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toast = Toast.makeText(Register_fingerprint.this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
         register_function();
     }
 

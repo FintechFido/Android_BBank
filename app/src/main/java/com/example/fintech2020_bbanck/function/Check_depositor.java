@@ -26,7 +26,7 @@ public class Check_depositor extends Activity {
     private ProgressBar progressBar;
     private Button btn;
     private Spinner spinner;
-    private String bankType;
+//    private String bankType;
     private static final String B_BANK_CODE = "2";
     private static final int REQUEST_CODE = 4000;
 
@@ -38,8 +38,8 @@ public class Check_depositor extends Activity {
         setContentView(R.layout.check_depositor);
 
         init();
-        setOnBtnClickListener();
         confirm();
+        setOnBtnClickListener();
     }
 
     private void init() {
@@ -69,8 +69,8 @@ public class Check_depositor extends Activity {
         SendRequest sendRequest = new SendRequest();
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("name", name);
-        hashMap.put("bank_code", B_BANK_CODE);
-        hashMap.put("account_code", account);
+        hashMap.put("bank_number", "1");
+        hashMap.put("account_number", account);
         System.out.println("CHECK : "+hashMap);
         sendRequest.send("https://"+ SSL_Connection.getSSLConnection().getUrl()+"/user/valid",
             1, hashMap, Check_depositor.this);
@@ -99,15 +99,16 @@ public class Check_depositor extends Activity {
         Call_HIDO call_hido = new Call_HIDO();
         if(call_hido.exist_check(Check_depositor.this)) {
             Intent intent = new Intent();
-            bankType =  String.valueOf(spinner.getSelectedItemPosition()+1);
-            Log.d("tag","bankType : " + bankType);
+//            bankType =  String.valueOf(spinner.getSelectedItemPosition()+1);
+//            Log.d("tag","bankType : " + bankType);
 
             intent.setClassName("com.example.fintech_hido","com.example.fintech_hido.function.Fingerprint_function");
             intent.putExtra("mode", "auth_check");
             intent.putExtra("session_key", User.getInstance().getSessionKey());
             intent.putExtra("imei", User.getInstance().getImei());
             intent.putExtra("running",User.getInstance().getRunningCode());
-            intent.putExtra("saved",bankType);
+            intent.putExtra("saved",spinner.getSelectedItem().toString()+"");
+            Log.d("teeg", "spinner :"+ spinner.getSelectedItem().toString()+"");
             startActivityForResult(intent,REQUEST_CODE);
         }
         else{

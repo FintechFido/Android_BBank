@@ -21,7 +21,7 @@ public class SSL_Connection
 
     private SSL_Connection()
     {
-        url = "54.180.32.170";
+        url = "172.30.1.3";
     }
 
     // singleton

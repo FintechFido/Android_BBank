@@ -4,7 +4,7 @@
         <item>오픈</item>
     </string-array>
     <string-array name="bankType">
-        <item>A Bank</item> <!--  getSelectedItemPostion : 0 -->
-        <item>B Bank</item> <!-- getSelectedItemPostion : 1 -->
+        <item>A 은행</item> <!--  getSelectedItemPostion : 0 -->
+        <item>B 은행</item> <!-- getSelectedItemPostion : 1 -->
     </string-array>
 </resources>

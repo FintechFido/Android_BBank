@@ -9,7 +9,7 @@ public class User {
     // Singleton
     private User()
     {
-        runningCode = 1;
+        runningCode = 2;
     }
 
     public static User getInstance(){
