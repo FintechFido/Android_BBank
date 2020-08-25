@@ -10,7 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="43dp"
-        android:entries="@array/bank_name"
+        android:entries="@array/bankName"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toTopOf="@+id/et_name"
         app:layout_constraintEnd_toEndOf="parent"
