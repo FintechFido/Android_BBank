@@ -21,7 +21,7 @@ public class SSL_Connection
 
     private SSL_Connection()
     {
-        url = "172.30.1.3";
+        url = "54.180.32.170:3000";
     }
 
     // singleton
@@ -34,7 +34,7 @@ public class SSL_Connection
         HostnameVerifier hostnameVerifier = new HostnameVerifier() {
             @Override
             public boolean verify(String hostname, SSLSession session) {
-                if(hostname.equalsIgnoreCase(url))
+                if(hostname.equalsIgnoreCase("54.180.32.170"))
                     return true;
                 else
                     return false;
