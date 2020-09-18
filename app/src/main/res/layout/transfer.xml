@@ -11,7 +11,8 @@
         android:id="@+id/tv_transfer"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:layout_marginVertical="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="48dp"
         android:layout_height="wrap_content"
         android:text="송금하기"
         android:textSize="60dp"
@@ -63,7 +64,6 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="이름"
-        android:text="홍길동"
         android:inputType="textPersonName"
         android:layout_weight="3" />
     </LinearLayout>
@@ -89,7 +89,6 @@
         android:ems="10"
         android:hint="계좌번호"
         android:inputType="textPersonName"
-        android:text="123456789000"
         android:layout_weight="3"/>
 
     </LinearLayout>
@@ -116,7 +115,6 @@
         android:hint="금액"
         android:textColor="@color/darkGray"
         android:inputType="numberDecimal"
-        android:text="1000"
         android:layout_weight="3"/>
     </LinearLayout>
 
