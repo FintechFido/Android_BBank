@@ -12,6 +12,7 @@
         android:layout_marginTop="240dp"
         android:text="님에게 송금하겠습니다"
         android:textSize="25dp"
+        android:textColor="@color/darkGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +36,8 @@
         android:clickable="false"
         android:text="송금"
         android:textSize="30dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -46,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="69dp"
         android:text="생체 정보 저장 은행 선택"
+        android:textColor="@color/darkGray"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_transfer_auth"
         app:layout_constraintStart_toStartOf="parent" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/colorPrimary">
 
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="B BANK"
         android:textAlignment="center"
-        android:textColor="#9E9E9E"
+        android:textColor="@color/white"
         android:textSize="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

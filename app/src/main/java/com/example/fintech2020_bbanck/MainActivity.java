@@ -72,8 +72,8 @@ public class MainActivity extends Activity {
     }
 
     public void update_balance(String string) {
-        TextView textView = (TextView)findViewById(R.id.tv_balance_value);
-        textView.setText(string+" 원");
+//        TextView textView = (TextView)findViewById(R.id.tv);
+//        textView.setText(string+" 원");
     }
 
     public void onFinish() {

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <Button
         android:id="@+id/btn_login"
@@ -11,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="로그인"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/et_passwd"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/et_passwd"
@@ -28,6 +30,9 @@
         android:text="test"
         android:hint="아이디"
         android:maxLength="12"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +46,9 @@
         android:ems="10"
         android:text="비밀번호"
         android:hint="비밀번호"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
         android:maxLength="20"
         android:selectAllOnFocus="true"
         android:textColorHighlight="@color/colorAccent"
@@ -55,6 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="141dp"
         android:text="B Bank"
+        android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="70sp"
         app:layout_constraintEnd_toEndOf="@+id/et_id"
