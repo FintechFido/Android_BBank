@@ -22,27 +22,20 @@ public class Transfer extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transfer);
 
-        init();
-        setBtnClickListener();
-    }
+        spinner = (Spinner) findViewById(R.id.spinner_bank);
+        account = (EditText) findViewById(R.id.et_account);
+        price = (EditText) findViewById(R.id.et_price);
+        name = (EditText) findViewById(R.id.et_name);
+        Button btn = (Button) findViewById(R.id.btn_check);
 
-    private void init() {
-        spinner = (Spinner)findViewById(R.id.spinner_bank);
-        account = (EditText)findViewById(R.id.et_account);
-        price = (EditText)findViewById(R.id.et_price);
-        name = (EditText)findViewById(R.id.et_name);
-    }
-
-    private void setBtnClickListener() {
-        Button btn = (Button)findViewById(R.id.btn_check);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Transfer.this, Check_depositor.class);
                 intent.putExtra("depositor_bank", spinner.getSelectedItem().toString());
-                intent.putExtra("account", ""+account.getText());
-                intent.putExtra("price",""+price.getText());
-                intent.putExtra("name", ""+name.getText());
+                intent.putExtra("account", "" + account.getText());
+                intent.putExtra("price", "" + price.getText());
+                intent.putExtra("name", "" + name.getText());
                 startActivityForResult(intent, 3000);
             }
         });
@@ -55,11 +48,11 @@ public class Transfer extends Activity {
             if (resultCode == 3000) {
                 // 입금자 정보 확인 실패한 경우 리턴됨
                 //
-            }
-            else {
-
+            } else if (resultCode == 1004) {
+                setResult(1004);
+                finish();
+            } else {
             }
         }
     }
-
 }
