@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.fintech2020_bbanck.MainActivity;
 import com.example.fintech2020_bbanck.R;
 import com.example.fintech2020_bbanck.model.User;
 import com.example.fintech2020_bbanck.network.SSL_Connection;
@@ -45,21 +46,19 @@ public class Register_fingerprint extends Activity {
         }
     }
 
-    public void onFinish() {
-        finish();
-        toast.cancel();
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if(data.hasExtra("result")){
-            if(data.getExtras().getString("result").toString().equals("true")) {
+            if(data.getExtras().getString("result").equals("true")) {
                 Alert.alert_function(Register_fingerprint.this, "register");
             }
             else {
-                Alert.alert_function(Register_fingerprint.this, "main");
+                Intent intent = new Intent(Register_fingerprint.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         }
         else {
@@ -76,10 +75,16 @@ public class Register_fingerprint extends Activity {
         else if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             // send(String url, int method, final HashMap<String, String> hashMap, Context context)
             SendRequest sendRequest = new SendRequest();
-            HashMap<String, String> hashMap = new HashMap<String, String>();
+            HashMap<String, String> hashMap = new HashMap<>();
             hashMap.put("session_key", User.getInstance().getSessionKey());
             sendRequest.send("https://"+ SSL_Connection.getSSLConnection().getUrl()+"/logout",
                     1, hashMap, Register_fingerprint.this);
         }
     }
+
+    public void onFinish() {
+        finish();
+        toast.cancel();
+    }
+
 }
